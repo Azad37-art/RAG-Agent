@@ -49,15 +49,23 @@ def inject_custom_css():
         }
 
         .meta-card {
-            background: #FFFFFF;
+            background: #1D4ED8  ;
             border: 1px solid #BFDBFE;
             border-radius: 16px;
             padding: 0.8rem;
-            color: #1D4ED8 !important;
         }
 
+/* Force ALL text inside card to white */
+        .meta-card * {
+            color: #FFFFFF !important;
+        }
+
+/* Optional: make labels slightly lighter */
+        .meta-card strong {
+            color: #E0F2FE !important;
+        }
         .url-item {
-            background: #FFFFFF;
+            background: #F0EBEB;
             border: 1px solid #93C5FD;
             border-radius: 14px;
             padding: 0.75rem 0.8rem;
@@ -72,7 +80,7 @@ def inject_custom_css():
         }
 
         .removed-url {
-            background: #EFF6FF;
+            background: ##1D4ED8;
             border: 1px solid #BFDBFE;
         }
 
@@ -171,8 +179,7 @@ def inject_custom_css():
             color: #EAF2FF !important;
         }
 
-        section[data-testid="stSidebar"] .meta-card,
-        section[data-testid="stSidebar"] .meta-card strong,
+    
         section[data-testid="stSidebar"] .url-item,
         section[data-testid="stSidebar"] .url-text {
             color: #1D4ED8 !important;
