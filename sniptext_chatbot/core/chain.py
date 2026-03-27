@@ -16,24 +16,43 @@ def build_messages(chat_history, prompt, user_question):
     messages.append(("human", user_question))
     return messages
 
-
 def generate_answer(user_question: str, chat_history: list):
     docs = retrieve_documents(user_question)
 
     context = build_context(docs)
     source_urls = extract_sources(docs)
-    related_link = source_urls[0] if source_urls else ""
 
+    # Default: no link
+    related_link = None
+
+    # Check context length first (irrelevant / not found)
     if len(context) < MIN_CONTEXT_LENGTH:
         answer = (
-            "I couldn’t find that information on the indexed website pages.\n\n"
-            "You can try asking about features, free tools, contact information, or company details."
+            "I'm sorry, I couldn’t find this information on the website.\n\n"
+            "📞 WhatsApp: +92 341 8378430\n"
+            "📧 Email: support@sniptext.com\n\n"
+            "Feel free to contact us — we’ll help you!"
         )
-        return answer, related_link
+        return answer, None   # ❌ NO LINK
 
+    # 🔥 SMART LINK FILTERING
+    if source_urls:
+        top_doc = docs[0]
+        content = top_doc.page_content.lower()
+        question_words = user_question.lower().split()
+
+        # Count matching words
+        match_count = sum(1 for w in question_words if w in content)
+
+        # Only allow link if strong match
+        if match_count >= 3:
+            related_link = source_urls[0]
+        else:
+            related_link = None  # ❌ remove wrong link
+
+    # Build prompt
     prompt = SYSTEM_PROMPT.format(
-        context=context,
-        source=related_link if related_link else "Not available"
+        context=context
     )
 
     llm = get_llm()
@@ -41,4 +60,13 @@ def generate_answer(user_question: str, chat_history: list):
     response = llm.invoke(messages)
 
     answer = response.content if hasattr(response, "content") else str(response)
+
     return answer, related_link
+
+def rebuild_index(urls: list):
+    """
+    Call your actual index rebuilding logic here.
+    Replace the body of this function with your real implementation.
+    For example: from core.indexer import build_index; build_index(urls)
+    """
+    pass
