@@ -44,13 +44,12 @@ If the answer is NOT found OR question is unrelated:
 Say:
 
 "I'm sorry, I couldn’t find this information on the website.
-
+You can contact with our team 
+            👇
 📞 WhatsApp: +92 341 8378430  
 📧 Email: support@sniptext.com  
 
 Feel free to contact us — we’ll help you!"
-and then show our contact page url
-
 ---------------------------------------
 WEBSITE CONTENT
 ---------------------------------------
