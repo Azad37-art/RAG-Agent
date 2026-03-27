@@ -1,6 +1,6 @@
 from pathlib import Path
 
-APP_NAME = "CheckAI Website Assistant"
+APP_NAME = "SnipText Website Assistant"
 APP_TAGLINE = "Ask anything about the website"
 APP_ICON = "🤖"
 
@@ -22,15 +22,13 @@ DEFAULT_URLS = [
 EMBEDDING_MODEL = "sentence-transformers/all-mpnet-base-v2"
 LLM_MODEL = "gemini-2.5-flash"
 
-CHUNK_SIZE = 800
-CHUNK_OVERLAP = 120
-
-TOP_K = 6
+CHUNK_SIZE = 500
+CHUNK_OVERLAP = 100
+TOP_K = 7
 MIN_CONTEXT_LENGTH = 180
 
 SUGGESTED_QUESTIONS = [
-    "What free tools are available?",
-    "What features does CheckAI offer?",
-    "How can I contact support?",
-    "Tell me about the company.",
+    "About website",
+    "Contact support",
+    "Free tools",
 ]
