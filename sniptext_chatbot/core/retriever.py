@@ -8,7 +8,7 @@ def retrieve_documents(user_question: str):
 
     retriever = vectorstore.as_retriever(
         search_type="mmr",
-        search_kwargs={"k": TOP_K, "fetch_k": 16}
+        search_kwargs={"k": TOP_K, "fetch_k": 25}
     )
 
     docs = retriever.invoke(user_question)
