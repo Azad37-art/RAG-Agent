@@ -22,9 +22,9 @@ DEFAULT_URLS = [
 EMBEDDING_MODEL = "sentence-transformers/all-mpnet-base-v2"
 LLM_MODEL = "gemini-2.5-flash"
 
-CHUNK_SIZE = 500
+CHUNK_SIZE = 700
 CHUNK_OVERLAP = 100
-TOP_K = 7
+TOP_K = 3
 MIN_CONTEXT_LENGTH = 180
 
 SUGGESTED_QUESTIONS = [
