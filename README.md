@@ -32,7 +32,7 @@ The project also includes a lightweight admin panel that allows management of in
 
 ### 1) Home Page
 
-<img src="assets/home_page.png" alt="SnipText Website Assistant Home Page" width="100%"/>
+<img src="sniptext_chatbot/secreenshots/Adman_page.png" alt="SnipText Website Assistant Home Page" width="100%"/>
 
 The home page is designed to provide a clean and user-friendly starting point for visitors.
 
