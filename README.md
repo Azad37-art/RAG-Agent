@@ -3,6 +3,12 @@
 An AI-powered website chatbot that answers user questions from indexed website content using a Retrieval-Augmented Generation (RAG) workflow.
 
 This project was built as a portfolio-ready AI assistant for business websites, combining smart question answering, related link suggestions, fallback contact support, and a simple admin panel for managing the knowledge base.
+---
+## Live Demo
+
+You can explore the deployed project here:
+
+🔗 [View Live Demo](https://sniptext-web-agent.streamlit.app/)
 
 ---
 
@@ -32,7 +38,7 @@ The project also includes a lightweight admin panel that allows management of in
 
 ### 1) Home Page
 
-<img src="sniptext_chatbot/secreenshots/Adman_page.png" alt="SnipText Website Assistant Home Page" width="100%"/>
+<img src="sniptext_chatbot/secreenshots/home_page.png" alt="SnipText Website Assistant Home Page" width="100%"/>
 
 The home page is designed to provide a clean and user-friendly starting point for visitors.
 
@@ -72,7 +78,7 @@ This landing screen shows that the chatbot is not just a raw AI demo, but a stru
 
 ### 2) Admin Panel
 
-<img src="assets/Adman_page.png" alt="SnipText Website Assistant Admin Panel" width="100%"/>
+<img src="sniptext_chatbot/secreenshots/Adman_page.png" alt="SnipText Website Assistant Admin Panel" width="100%"/>
 
 The admin panel is built for managing the chatbot’s website knowledge base.
 
@@ -116,7 +122,7 @@ This admin view demonstrates that the project is not only a chatbot, but also in
 
 ### 3) Q&A Demo
 
-<img src="assets/Q&A.png" alt="SnipText Website Assistant Q&A Demo" width="100%"/>
+<img src="sniptext_chatbot/secreenshots/Q&A.png" alt="SnipText Website Assistant Q&A Demo" width="100%"/>
 
 This screenshot demonstrates the chatbot’s real behavior during user interaction.
 
@@ -232,17 +238,3 @@ This is a strong feature for business and support-focused AI tools, where accura
 - **RAG-based question answering**
 - **Custom admin panel logic**
 
----
-
-## Project Structure
-
-```bash
-.
-├── app.py
-├── requirements.txt
-├── README.md
-├── assets/
-│   ├── home_page.png
-│   ├── Adman_page.png
-│   └── Q&A.png
-└── .streamlit/
